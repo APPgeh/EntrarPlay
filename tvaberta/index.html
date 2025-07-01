@@ -1,40 +1,69 @@
-
-
-
-<head><title></title></head>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TV Aberta</title>
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #181818 0%, #333333 50%, #444444 100%);
+      background-color: #222222;
+      color: #f2f2f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .botoes-centro {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+      margin-top: 40px;
+    }
+    .botao-borda {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.85);
+      border-radius: 18px;
+      border: 4px solid #b0b0b0; /* Borda cinza */
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+      transition: border-color 0.2s, transform 0.2s;
+      padding: 12px 24px;
+      margin: 0 0 10px 0;
+    }
+    .botao-borda:hover {
+      border-color: #f2f2f2;
+      transform: scale(1.04);
+    }
+    .botao-borda img {
+      width: 420px;   /* Aumenta o tamanho */
+      max-width: 90vw;
+      height: auto;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      .botao-borda img {
+        width: 95vw;
+        max-width: 95vw;
+      }
+      .botoes-centro {
+        gap: 24px;
+      }
+    }
+  </style>
+</head>
 <body>
-<div class="separator" style="clear: both;"><a href="go:CATEGORIAS" style="display: block; padding: 1em 0; text-align: center; clear: left; float: left;"><img alt="" border="0" width="220" data-original-height="525" data-original-width="1241" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcv_Jj5XL3m__1i4-e-Tpw9cvNqyLyd-AqmdtOwPLhFzHTaNui98aVyczvfg9LiSIZYSAiwaGFQ7PaWLbMqKfZWgkndHtR12BSAKF6fN6NLr7VSge3HQwNgExwb6GDClP5-qsYYuICKwuxP54YWOPl48sF3SBAUqTcAImHHsTkclCgcpPTANchqWjlSB8n/s320/1690252650223.png"/></a></div>
-
-
-
-<div align-items="center">
-
-<div justify-content="center">
-<p></p><div class="separator" style="clear: both; text-align: center;"><a href="go:TVABERTA" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="887" data-original-width="2989" height="95" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_deLSOFKf0SZfgglO52uSuvm1RTSMshphT33bXZ-K-v3qNRLRvuqb-47YcWCXdPM2BTZcCKjDOmhK8-ZSCDzz9lLTfU-pDarPqH9K3JaNv8ddNSK33RVPBATeWK9fnoUCnSvYuWHY8zKYI3bSabpQbZuBa47u5AiOPLrT0XYoS6CNBYxNw6itmky4KQ/s2610/1680934892956.jpg" width="320" /></a></div><br /> <div class="separator" style="clear: both; text-align: center;"></div>
-
-<style>
-
-body {
-
-background-image: url();
-
-  background-attachment: fixed;
-
-  background-size: 100%;
-
-  background-repeat: no-repeat;
-
-  background-image: linear-gradient(to top,
-
-    #999999, #000033);
-
-}
-
-</style>
-<div align-items="center">
-
-<br/>
-<br/>
-<br/>
-<br/>
-
+  <div class="botoes-centro">
+    <a class="botao-borda" href="go:TVABERTA">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_deLSOFKf0SZfgglO52uSuvm1RTSMshphT33bXZ-K-v3qNRLRvuqb-47YcWCXdPM2BTZcCKjDOmhK8-ZSCDzz9lLTfU-pDarPqH9K3JaNv8ddNSK33RVPBATeWK9fnoUCnSvYuWHY8zKYI3bSabpQbZuBa47u5AiOPLrT0XYoS6CNBYxNw6itmky4KQ/s2610/1680934892956.jpg" alt="TV Aberta">
+    </a>
+    <!-- Exemplo de segundo botão, adicione mais se quiser -->
+    <a class="botao-borda" href="go:OUTROCANAL">
+      <img src="https://via.placeholder.com/420x120.png?text=Outro+Bot%C3%A3o" alt="Outro Botão">
+    </a>
+  </div>
+</body>
+</html>
