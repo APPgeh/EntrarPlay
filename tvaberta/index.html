@@ -40,6 +40,10 @@
   }
 </style>
  
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
   <title>TV Aberta</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
@@ -54,7 +58,6 @@
       justify-content: center;
       flex-direction: column;
     }
-
     .botoes-centro {
       display: flex;
       flex-direction: column;
@@ -63,7 +66,6 @@
       margin-top: 40px;
       width: 100vw;
     }
-
     .botao-borda {
       display: flex;
       align-items: center;
@@ -76,29 +78,28 @@
       padding: 6px 16px;
       margin: 0 0 10px 0;
       max-width: 220px;
-      width: 100%;
+      width: 90vw;
+      box-sizing: border-box;
     }
-
     .botao-borda img {
       width: 90px;
       max-width: 70vw;
       height: auto;
       display: block;
     }
-
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
+      .botoes-centro {
+        margin-top: 18px;
+        gap: 18px;
+      }
       .botao-borda {
-        max-width: 90vw;
-        padding: 4px 8px;
+        max-width: 95vw;
+        padding: 4px 6vw;
       }
       .botao-borda img {
         width: 60vw;
-        min-width: 80px;
+        min-width: 70px;
         max-width: 90vw;
-      }
-      .botoes-centro {
-        margin-top: 18px;
-        gap: 20px;
       }
     }
   </style>
@@ -106,7 +107,7 @@
 <body>
   <div class="botoes-centro">
     <a class="botao-borda" href="go:TVABERTA">
-      <img src="https://i.postimg.cc/bwhzm68W/1680934892956-copy-1280x511.jpg" alt="TV Aberta">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_deLSOFKf0SZfgglO52uSuvm1RTSMshphT33bXZ-K-v3qNRLRvuqb-47YcWCXdPM2BTZcCKjDOmhK8-ZSCDzz9lLTfU-pDarPqH9K3JaNv8ddNSK33RVPBATeWK9fnoUCnSvYuWHY8zKYI3bSabpQbZuBa47u5AiOPLrT0XYoS6CNBYxNw6itmky4KQ/s2610/1680934892956.jpg" alt="TV Aberta">
     </a>
   </div>
 </body>
