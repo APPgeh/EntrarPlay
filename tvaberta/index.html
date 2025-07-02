@@ -39,9 +39,31 @@
     }
   }
 </style>
-  <meta charset="UTF-8">
+ 
   <title>TV Aberta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #181818 0%, #333333 50%, #444444 100%);
+      background-color: #222222;
+      color: #f2f2f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .botoes-centro {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      align-items: center;
+      margin-top: 40px;
+      width: 100vw;
+    }
+
     .botao-borda {
       display: flex;
       align-items: center;
@@ -53,24 +75,31 @@
       transition: border-color 0.2s, transform 0.2s;
       padding: 6px 16px;
       margin: 0 0 10px 0;
-      max-width: 320px;
+      max-width: 220px;
       width: 100%;
     }
 
     .botao-borda img {
-      width: 120px;
-      max-width: 85vw;
+      width: 90px;
+      max-width: 70vw;
       height: auto;
       display: block;
     }
 
-    .botoes-centro {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-      align-items: center;
-      margin-top: 40px;
-      width: 100vw;
+    @media (max-width: 480px) {
+      .botao-borda {
+        max-width: 90vw;
+        padding: 4px 8px;
+      }
+      .botao-borda img {
+        width: 60vw;
+        min-width: 80px;
+        max-width: 90vw;
+      }
+      .botoes-centro {
+        margin-top: 18px;
+        gap: 20px;
+      }
     }
   </style>
 </head>
