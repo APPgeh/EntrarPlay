@@ -3,11 +3,99 @@
 
 
 
-
-
-
-
 <head>
+  <meta charset="UTF-8">
+  <title>Desbloquear App</title>
+  <style>
+    #bloqueio {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.95);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    #conteudo {
+      display: none;
+      padding: 20px;
+      color: #fff;
+      background: #121212;
+      min-height: 20vh;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #00c853;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #009624;
+    }
+  </style>
+</head>
+<body>
+
+<div id="bloqueio">
+  <h2>Para continuar, clique no botão abaixo</h2>
+  <button onclick="irParaLink()">Clicar aqui para desbloquear o app</button>
+</div>
+
+<div id="conteudo">
+  <!-- Conteúdo real da sua página -->
+  <h1>✅ Conteúdo Desbloqueado</h1>
+  <p>CLIQUE NO BOTÃO ABAIXO PARA ACESSAR O APLICATIVO.</p>
+</div>
+
+<script>
+  let novaAba;
+
+  function irParaLink() {
+    // Tenta abrir a nova aba
+    novaAba = window.open("https://orientsweptautopsy.com/mqtki2pd?key=0d2ccb345f3f5db24862582b05c3d8f1", "_blank");
+
+    if (!novaAba || novaAba.closed || typeof novaAba.closed === "undefined") {
+      alert("❌ O navegador bloqueou o pop-up. Libere pop-ups e tente novamente.");
+    } else {
+      // Inicia a verificação contínua para detectar quando a aba for fechada
+      const checarAba = setInterval(() => {
+        if (novaAba.closed) {
+          clearInterval(checarAba); // Para de verificar quando a aba fechar
+
+          // Marcar como liberado
+          sessionStorage.setItem("liberado", "sim");
+
+          // Exibir o conteúdo liberado
+          document.getElementById("bloqueio").style.display = "none";
+          document.getElementById("conteudo").style.display = "block";
+        }
+      }, 1000); // Checa a cada 1 segundo
+    }
+  }
+
+  window.onload = function () {
+    if (sessionStorage.getItem("liberado") === "sim") {
+      document.getElementById("bloqueio").style.display = "none";
+      document.getElementById("conteudo").style.display = "block";
+    }
+  }
+</script>
+
+</body>
+
+
+
+
+
 <div id="ad-container" style="width: 100%; max-width: 728px; margin: 0 auto;">
  <script type="text/javascript">
 	atOptions = {
