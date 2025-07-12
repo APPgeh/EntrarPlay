@@ -1,0 +1,3 @@
+google.com, pub-1419914821759137, DIRECT, f08c47fec0942fa0
+google.com, pub-7915887679464005, DIRECT, f08c47fec0942fa0
+xandr.com, 16931, RESELLER
