@@ -1,87 +1,49 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+
+    <html>
 <head>
-
-
-<!-- INÍCIO ADS 1 -->
-
-<!-- FIM ADS 1 -->
-
-<!-- INICIO ADS 2-->
-<div id="ad-container" style="width: 100%; max-width: 728px; margin: 0 auto;"></div>
-<script type="text/javascript">
-  atOptions = {
-    'key' : '6717d78b5956505563b5fafaaff751fd',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
+<script>
+window.onload = function() {
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function(event) {
+            if (this.getAttribute('target') === '_blank') {
+                event.preventDefault();
+            }
+        });
+    }
+};
 </script>
-<script type="text/javascript" src="//orientsweptautopsy.com/6717d78b5956505563b5fafaaff751fd/invoke.js"></script>
-<style>
-  body {
-    min-height: 100vh;
-    margin: 0;
-    background: linear-gradient(135deg, #181818 0%, #333333 50%, #444444 100%);
-    background-color: #222222;
-    color: #f2f2f2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .botoes-centro {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-    margin-top: 32px;
-  }
-  .botoes-centro a {
-    background: rgba(0,0,0,0.85);
-    border-radius: 18px;
-    padding: 24px 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
-    transition: background 0.2s, transform 0.2s;
-  }
-  .botoes-centro a:hover {
-    background: rgba(40,40,40,0.97);
-    transform: scale(1.04);
-  }
-  .botoes-centro img {
-    width: 600px;
-    height: auto;
-    display: block;
-    max-width: 100%;
-  }
-  @media screen and (max-width: 768px) {
-    #ad-container {
-      max-width: 100%;
-    }
-    #ad-container iframe {
-      width: 100% !important;
-      height: 80px !important;
-    }
-    .botoes-centro img {
-      width: 100%;
-      max-width: 600px;
-    }
-    .botoes-centro a {
-      padding: 16px 8vw;
-    }
-  }
-</style>
-<!-- FIM ADS 2 -->
-
-<div class="botoes-centro">
-  <a href="https://www.entrarplay.com.br/2025/06/entrar2.html?m=1">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiX5yGJdGZGDjvNQg9yWMPaVQ1GYHKozio9ozMIMpX3JaJapnqg9X3uCls7YhKj2eGSzvSgEoOSPcHAVl4ksqR6zWg60V7sSyrHhyQk7NmWAQJukpJUrKhmB4V3QeJiFzbf-jj76jGsD68eFqyiKw54DFfjjop8aXs77RvrXlvKm9OqkYXUZqGClRzeeA/s337/22350838_ico.png" alt="Botão 1">
-  </a>
-  <a href="http://www.mediafire.com/file/va97rn83lhwpz2s/Play%2BG.apk">
-    <img src="https://i.postimg.cc/JhwVmTcn/1751191612285.png" alt="Botão 2">
-  </a>
+  
+<title>entrar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1></h1>
+<div class="iframe-container">
+   <iframe class="iframe" id="iframe1" src="https://playtvgeh.vercel.app/?url=https://a-yz.com/smart.php?link=9492836&var=9492836&var_3=_BR" style="width:100%; height: 50px;"></iframe>
 </div>
+<div class="iframe-container">
+   <iframe class="iframe" id="iframe2" src="https://playtvgeh.vercel.app/?url=https://a-yz.com/smart.php?link=9492836&var=9492836&var_3=_BR" style="width:100%; height: 50px;"></iframe>
+</div>
+<div class="iframe-container">
+   <iframe class="iframe" id="iframe3" src="https://playtvgeh.vercel.app/?url=https://a-yz.com/smart.php?link=9492836&var=9492836&var_3=_BR" style="width:100%; height: 50px;"></iframe>
+</div>
+<script>
+    // Função para atualizar os iframes a cada 15 segundos
+    function updateIframes() {
+      document.getElementById("iframe1").src += "&random=" + Math.random(); // Adiciona um parâmetro aleatório à URL para forçar o recarregamento
+      document.getElementById("iframe2").src += "&random=" + Math.random(); // Adiciona um parâmetro aleatório à URL para forçar o recarregamento
+      document.getElementById("iframe3").src += "&random=" + Math.random(); // Adiciona um parâmetro aleatório à URL para forçar o recarregamento
+    }
+
+    // Chama a função a cada 15 segundos
+    setInterval(updateIframes, 15000);
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c25e3845bd9ca6a","version":"2024.8.0","r":1,"token":"9282cdf86dc44d2a882968431279f4c6","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
+    
+
+
