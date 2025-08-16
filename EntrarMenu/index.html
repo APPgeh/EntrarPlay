@@ -75,7 +75,7 @@
   <a href="go:CATEGORIAS">
     <img id="btnPrincipal" border="0" 
          src="img/22350838_ico.png"
-         width="337" height="100" />
+         width="800" height="220" />
   </a>
 </div>
 
@@ -97,10 +97,18 @@ body {
   margin-top: 40px;
 }
 
-/* Estilo extra para mobile */
+/* Ajuste geral para mobile */
 body.mobile #btnPrincipal {
-  width: 95%;   /* Botão ocupa quase toda a tela */
-  height: auto; /* Mantém proporção */
+  width: 95%;   /* Ocupa quase toda a largura */
+  height: auto;
+}
+
+/* --- Detecta quando o celular está em modo paisagem --- */
+@media screen and (orientation: landscape) {
+  #btnPrincipal {
+    width: 60% !important;  /* Diminui no modo horizontal */
+    height: auto;
+  }
 }
 </style>
 
@@ -114,7 +122,6 @@ function detectarDispositivo() {
 }
 
 const dispositivo = detectarDispositivo();
-
 if (dispositivo === "mobile") {
   document.body.classList.add("mobile");
 }
