@@ -2,6 +2,15 @@
     <html>
 <head>
 <script>
+  if (window.top === window.self) {
+    // Não está em um iframe
+    document.body.innerHTML = "";
+    document.write("<div style='color: white; font-size: 2em; text-align: center; margin-top: 40vh;'>Acesso apenas via iframe!</div>");
+    // Opcional: Redirecionar ou fechar
+    // window.location.href = "https://entrarappads.vercel.app/";
+  }
+</script>
+<script>
 window.onload = function() {
     var links = document.getElementsByTagName('a');
     for (var i = 0; i < links.length; i++) {
