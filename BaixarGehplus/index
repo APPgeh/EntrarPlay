@@ -55,4 +55,33 @@
       font-size: 18px;
       font-weight: bold;
       border-radius: 30px;
-      box-shadow: 0 4px 12px rgba(0
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: background 0.3s ease;
+    }
+    .btn-download:hover {
+      background-color: #e63636;
+    }
+    .btn-download svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Escolha o dispositivo para baixar</h1>
+
+  <div class="image-preview">
+    <img src="https://i.postimg.cc/1XW6hqBR/1756195934473.png" alt="Preview do aplicativo">
+  </div>
+
+  <div class="download-section">
+    <div class="device-title">Celular</div>
+    <a href="https://www.mediafire.com/file/0f3zmk460yc0vfe/GehTVPLUS.apk/file" class="btn-download">
+      <!-- Ícone de download -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.67v4h6V9h3.67L12 2z"/></svg>
+      Baixar
+    </a>
+  </div>
+</body>
+</html>
