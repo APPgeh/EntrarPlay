@@ -1,73 +1,60 @@
-<!DOCTYPE html>
-<html>
+    <div class="container">
+<select id="capitulos">
+
+
+<option value="">SELECIONE UM EPISÓDIO AQUI!</option>  
+<option value="https://painelpsn.novefx.biz/v/FAZENDA17x000">𝗔 𝗙𝗮𝘇𝗲𝗻𝗱𝗮 𝟭𝟳</option>
+<option value="https://painelpsn.novefx.biz/v/FAZENDA17x001">➤ Episódio 01 | 15/09/2025</option>
+
+
+            </select>
+			
+    <button class="not-visible" id="botao"></button>
+        
+        <div id="player"></div>
+    </div>        
 <head>
+    <meta charset="UTF-8">
+    
+    <style>
+* {margin: 0;padding: 0;box-sizing: border-box;}
+body {font-family: Arial, sans-serif;background-color: #000000;}
+.container {max-width: 100%;margin: 5px auto;padding: 0px;text-align: center;background-color: #000;border-radius: 5px;box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);}
+h1 {text-align: center;margin-bottom: 20px;}
+#select-wrapper {position: relative;z-index: 0;height: 0;overflow: hidden;transition: all 0.3s ease;}
 
-<img src="https://whos.amung.us/widget/03yp5qtdqa.png" width="0" height="0" border="0" />
+#select-wrapper.select-visible {height: 15px;}
 
+#capitulos {width: 85%;height: 100%px;border: 1px solid #ccc;border-radius: 5px;background-color: #fff;color: #000;font-size: 17px;padding: 1px;margin-top: 0px;margin-left: 25px;text-align: center;font-family: "Calibri";box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);}
 
+#player {margin-top: 4px;display: none;width: 100%; background-color: #000;}
 
+#video {width: 100%;height: 310px;border: 1px solid #fff;}
 
-  <meta charset="UTF-8">
-  <title>TV Aberta</title>
-  <style>
-    body {
-      min-height: 100vh;
-      margin: 0;
-      background: linear-gradient(135deg, #181818 0%, #333333 50%, #444444 100%);
-      background-color: #222222;
-      color: #f2f2f2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-    .botoes-centro {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      align-items: center;
-      margin-top: 40px;
-    }
-    .botao-borda {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(0,0,0,0.85);
-      border-radius: 18px;
-      border: 4px solid #b0b0b0; /* Borda cinza */
-      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
-      transition: border-color 0.2s, transform 0.2s;
-      padding: 12px 24px;
-      margin: 0 0 10px 0;
-    }
-    .botao-borda:hover {
-      border-color: #f2f2f2;
-      transform: scale(1.04);
-    }
-    .botao-borda img {
-      width: 450px;   /* Aumenta o tamanho */
-      max-width: 90vw;
-      height: auto;
-      display: block;
-    }
-    @media (max-width: 600px) {
-      .botao-borda img {
-        width: 95vw;
-        max-width: 95vw;
-      }
-      .botoes-centro {
-        gap: 24px;
-      }
-    }
-  </style>
+botao {position: ;z-index: 1;margin-top: 1px;padding: -2px;border: 1px solid #ccc;border-radius: 5px;background-color: #fff;color: #fff;cursor: pointer;transition: all 0.3s ease;display: block;}
+
+.not-visible {  visibility: hidden;}
+    </style>
 </head>
-<body>
-  <div class="botoes-centro">
-    <a class="botao-borda" href="go:Filmes">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBo-F_jJF4ydd4xyozt3JtJwPuHFbq566INhPs3xjyPca8Ho1ja-QvfEk4vjc_xq-i9evcp3oynUiK8FdTe1OvaYw9sOcMNidpSJ_Ok22tnYlcu9u-jGWas_EScrSbxpI5ee7LpR6z-qJ-7waBiTUzIMnLsQ0yUlMJY8Ir5aD_9zrnCru1tvRN5FY_0g/s2610/1680934921952.jpg" alt="TV Aberta">
-    </a>
-
-
-  </div>
-</body>
-</html>
+    <script>
+        const botao = document.getElementById("botao");
+        const selectWrapper = document.getElementById("select-wrapper");
+        const selectCapitulos = document.getElementById("capitulos");
+        const player = document.getElementById("player");
+        botao.addEventListener("click", () => {
+            selectWrapper.classList.toggle("select-visible");
+        });
+        selectCapitulos.addEventListener("change", () => {
+            const url = selectCapitulos.value;
+            if (url) {
+                player.innerHTML = `<iframe src="${url}" frameborder="0" height="310" width="100%" allowfullscreen></iframe>`;
+                player.style.display = "block";
+                selectWrapper.classList.remove("select-visible");
+            }
+        });
+    </script>    
+    <script type="text/javascript">
+    document.oncontextmenu = function() {
+        return false;
+    }
+</script>
