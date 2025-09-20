@@ -1,95 +1,35 @@
-<!DOCTYPE html>
-<html>
-
-
-
+<!doctype html>
+<html lang="pt-br">
 <head>
-
-
-<img src="https://whos.amung.us/widget/03yp5qtdqa.png" width="0" height="0" border="0" />
-
-  
-
-
-
-
-
-
-
-
-
- 
-  <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>TV Aberta</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Embed • PlayPlus</title>
   <style>
-    body {
-      min-height: 100vh;
-      margin: 0;
-      background: linear-gradient(135deg, #181818 0%, #333333 50%, #444444 100%);
-      background-color: #222222;
-      color: #f2f2f2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+    html,body{height:100%;margin:0;background:#000}
+
+    .wrap{
+      position:fixed; inset:0;
+      height:100dvh;           
     }
-    .botoes-centro {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-      align-items: center;
-      margin-top: 40px;
-      width: 100vw;
+    @supports not (height: 100dvh){
+      .wrap{height:100svh}      
     }
-    .botao-borda {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(0,0,0,0.85);
-      border-radius: 10px;
-      border: 2px solid #b0b0b0;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
-      transition: border-color 0.2s, transform 0.2s;
-      padding: 6px 16px;
-      margin: 0 0 10px 0;
-      max-width: 220px;
-      width: 90vw;
-      box-sizing: border-box;
+    @supports not (height: 100svh){
+      .wrap{height:100vh}       
     }
-    .botao-borda img {
-      width: 90px;
-      max-width: 70vw;
-      height: auto;
-      display: block;
-    }
-    @media (max-width: 600px) {
-      .botoes-centro {
-        margin-top: 18px;
-        gap: 18px;
-      }
-      .botao-borda {
-        max-width: 95vw;
-        padding: 4px 6vw;
-      }
-      .botao-borda img {
-        width: 60vw;
-        min-width: 70px;
-        max-width: 90vw;
-      }
+    iframe{
+      width:100%; height:100%;
+      display:block; border:0; background:#000;
     }
   </style>
 </head>
 <body>
-  <div class="botoes-centro">
-    <a class="botao-borda" href="go:TVABERTA">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwnZfTJWosdLUPNO4tMtOM1YLuqpgEIzYiaOf13ywTAEM9u8QXgI8jKsJLc3_tYcgYYyAKFohHVeWLJueXLuS5VkFrYcJJ9HTPxuHO42E6X2eyOucISFP69nTMKqj0Vc_3IomsK_UC3Wfd29qqjdVvKDPRGjKu0Jf3TkO6HzjBAlvLZBWYIemNEh1Mpfyf/s2610/1000575582.jpg" alt="TV Aberta">
-    </a>
+  <div class="wrap">
+    <iframe
+      src="https://blogger.blogger.cat/playplus"
+      allow="fullscreen; autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen
+    ></iframe>
   </div>
-
-
 </body>
 </html>
